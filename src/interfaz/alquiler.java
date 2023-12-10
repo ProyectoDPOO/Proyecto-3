@@ -7,6 +7,8 @@ import Procesamiento.EmpresaAlquilerVehiculo;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class alquiler extends JFrame {
     private JTextField[] txtCamposAlquiler;
@@ -50,6 +52,7 @@ public class alquiler extends JFrame {
         // Botones de Crear Alquiler y Regresar
         JButton crearAlquilerButton = new JButton("Crear Alquiler");
         JButton regresarButton = new JButton("Salir");
+       
 
         JPanel botonesPanel = new JPanel();
         botonesPanel.add(crearAlquilerButton);
@@ -84,11 +87,11 @@ public class alquiler extends JFrame {
                 dispose(); 
             }
         });
-
+        
         setVisible(true);
     }
     
-    public alquiler() {
+    public alquiler() throws FileNotFoundException, IOException {
     	EmpresaAlquilerVehiculo empresa = new EmpresaAlquilerVehiculo();
         setTitle("Crear Alquiler");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -171,7 +174,7 @@ public class alquiler extends JFrame {
         panel.add(label);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, IOException {
         EmpresaAlquilerVehiculo empresa = new EmpresaAlquilerVehiculo();
         new alquiler(empresa);
     }
