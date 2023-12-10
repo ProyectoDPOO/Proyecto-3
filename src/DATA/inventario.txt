@@ -1,0 +1,5 @@
+ABC123,Toyota,Corolla,Blue,Automatic,5,Sedan,Available,Sede1,2023-11-17
+DEF456,Honda,Accord,Red,Manual,4,Sedan,Not Available,Sede2,2023-11-18
+GHI789,Ford,Explorer,Black,Automatic,7,SUV,Available,Sede1,2023-11-19
+JKL012,Chevrolet,Cruze,Silver,Manual,5,Sedan,Available,Sede3,2023-11-20
+MNO345,Toyota,Rav4,Green,Automatic,5,SUV,Not Available,Sede2,2023-11-21

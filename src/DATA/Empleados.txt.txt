@@ -1,0 +1,10 @@
+Anderson Arevalo,anderson.arevalo,clave1,Administrador,SedeA
+Juan Perez,juan.perez,pass1,Administrador sede,SedeB
+Maria Lopez,maria.lopez,123,Empleado,SedeC
+Laura Rodriguez,laura.rodriguez,pass2,Administrador,SedeA
+Ana Gomez,ana.gomez,xyz,Cliente,SedeB
+Diego Soto,diego.soto,456,Cliente,SedeC
+Sofia Lopez,sofia.lopez,789,Cliente,SedeA
+Raul Fernandez,raul.fernandez,987,Cliente,SedeB
+Pedro Ramirez,pedro.ramirez,clave3,Empleado,SedeC
+Isabel Torres,isabel.torres,pass3,Administrador,SedeA
