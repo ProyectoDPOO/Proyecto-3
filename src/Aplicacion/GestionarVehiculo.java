@@ -1,6 +1,9 @@
 package Aplicacion;
 
 import javax.swing.*;
+
+import Modelo.Facturar;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -90,7 +93,9 @@ public class GestionarVehiculo extends JFrame {
                         "Categoría:",
                         "Estado:",
                         "Sede Actual:",
-                        "Fecha Disponible:"
+                        "Fecha Disponible:",
+                        "Tipo Vehiculo:",
+                        "Prima Seguro:",
                 };
 
                 JTextField[] camposTexto = new JTextField[etiquetas.length];
@@ -282,6 +287,7 @@ public class GestionarVehiculo extends JFrame {
             @Override
             public void run() {
                 new GestionarVehiculo();
+                
             }
         });
     }

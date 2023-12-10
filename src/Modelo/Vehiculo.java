@@ -11,9 +11,12 @@ public class Vehiculo {
 	private EstadoVehiculo estado;
 	private int capacidad;
 	private String categoria;
+	private String Tipo;
+	private Double PrimaSeguro;
 
 	public Vehiculo(String placa, String marca, String modelo, String color, String transmision, 
-			int capacidad, String categoria, String estado, String sedeActual, String fechadisponible) {
+			int capacidad, String categoria, String estado, String sedeActual, String fechadisponible,
+			String Tipo,Double PrimaSeguro) {
 		
 		this.placa = placa;
 		this.marca = marca;
@@ -22,6 +25,8 @@ public class Vehiculo {
 		this.transmision = transmision;
 		this.categoria = categoria.toUpperCase();
 		this.capacidad = capacidad;
+		this.Tipo = Tipo;
+		this.PrimaSeguro = PrimaSeguro;
 		this.estado = new EstadoVehiculo(estado, sedeActual.toUpperCase(), fechadisponible);
 		
 
@@ -43,6 +48,12 @@ public class Vehiculo {
 		
 		return this.modelo;	
 	
+	}
+	public String getTipo() {
+		return this.Tipo;	
+	}
+	public Double getPrimaSeguro() {
+		return this.PrimaSeguro;	
 	}
 	
 	public String getColor() {

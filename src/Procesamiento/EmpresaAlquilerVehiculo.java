@@ -106,9 +106,9 @@ public class EmpresaAlquilerVehiculo {
 		 }
 		
 	public void registrarVehiculo(String placa, String marca, String modelo, String color, String transmision, 
-			int capacidad, String categoria, String estado, String sedeActual, String fechadisponible) 
+			int capacidad, String categoria, String estado, String sedeActual, String fechadisponible,String tipo, Double primaSeguro) 
 	{
-		  Vehiculo newVehiculo = new Vehiculo(placa, marca, modelo,color,transmision,capacidad,categoria,estado, sedeActual, fechadisponible);
+		  Vehiculo newVehiculo = new Vehiculo(placa, marca, modelo,color,transmision,capacidad,categoria,estado, sedeActual, fechadisponible, tipo, primaSeguro);
 		  inventario.put(placa, newVehiculo);
 	}
 	
@@ -363,7 +363,9 @@ public class EmpresaAlquilerVehiculo {
 		            String estado = vehiculoData[7];
 		            String sedeActual = vehiculoData[8];
 		            String fechadisponible = vehiculoData[9];
-		            registrarVehiculo(placa, marca, modelo, color, transmision, capacidad, categoria, estado, sedeActual, fechadisponible);
+					String tipo = vehiculoData[10];	
+					Double primaSeguro = Double.parseDouble(vehiculoData[11]);
+		            registrarVehiculo(placa, marca, modelo, color, transmision, capacidad, categoria, estado, sedeActual, fechadisponible,tipo,primaSeguro);
 		            linea1 = buffer1.readLine();
 				}
 		        buffer1.close();
