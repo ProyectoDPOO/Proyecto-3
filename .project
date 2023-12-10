@@ -14,6 +14,13 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>resources/logo.png</name>
+			<type>1</type>
+			<location>C:/Users/afag2/Downloads/Entrega 3/logo.png</location>
+		</link>
+	</linkedResources>
 	<filteredResources>
 		<filter>
 			<id>1697427762828</id>
