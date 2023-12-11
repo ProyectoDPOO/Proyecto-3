@@ -1,0 +1,1 @@
+Fecha: 2023-12-10T21:06:50.011, Monto: 100000.0, Tarjeta: 31512, Resultado: Éxito

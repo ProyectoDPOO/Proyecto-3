@@ -195,8 +195,8 @@ public class alquiler extends JFrame {
     }
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        //EmpresaAlquilerVehiculo empresa = new EmpresaAlquilerVehiculo();
-        EmpresaAlquilerVehiculo empresa = null;
+        EmpresaAlquilerVehiculo empresa = new EmpresaAlquilerVehiculo();
+       
         new alquiler(empresa);
     }
 }
