@@ -9,3 +9,16 @@ null:
 null: 
 null: 
 ----------------------------------------
+null: BTX
+null: Chevy
+null: 2006
+null: Gris
+null: 2
+null: 4
+null: 4
+null: 10
+null: Norte
+null: 28/11/2023
+null: Automovil
+null: 0
+----------------------------------------

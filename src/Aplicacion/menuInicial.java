@@ -130,5 +130,3 @@ public class menuInicial extends JFrame {
         });
     }
 }
-
-

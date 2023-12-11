@@ -31,23 +31,36 @@ public class CrearSeguro extends JFrame {
 
         // Agregar etiquetas y campos de texto
         String[] etiquetas = {
-                "Tipo de Seguro:",
-                "Costo del Seguro ($):"
+            "Tipo de Seguro:",
+            "Costo del Seguro ($):"
         };
 
+        // Inicializar los campos de texto
+        textFieldTipoSeguro = new JTextField(15);
+        textFieldCostoSeguro = new JTextField(15);
+
         for (String etiqueta : etiquetas) {
-            JLabel label = new JLabel(etiqueta);
-            JTextField textField = new JTextField(15); // Ajustar el ancho del campo de texto
-            // Predeterminar el campo "Costo del Seguro" con un signo $
-            if (etiqueta.equals("Costo del Seguro ($):")) {
-                textField.setText("$");
-            }
-            // Agregar etiqueta y campo de texto al panel con restricciones
-            panelCreacionSeguro.add(label, gbc);
-            gbc.gridx++;
-            panelCreacionSeguro.add(textField, gbc);
-            gbc.gridx = 0; // Reiniciar la posición en X
-            gbc.gridy++;   // Moverse a la siguiente fila
+        JLabel label = new JLabel(etiqueta);
+        JTextField textField = new JTextField(15);
+
+        // Almacenar las referencias a los campos de texto
+        if (etiqueta.equals("Tipo de Seguro:")) {
+            textFieldTipoSeguro = textField;
+        } else if (etiqueta.equals("Costo del Seguro ($):")) {
+            textFieldCostoSeguro = textField;
+        }
+
+        // Predeterminar el campo "Costo del Seguro" con un signo $
+        if (etiqueta.equals("Costo del Seguro ($):")) {
+            textField.setText("$");
+        }
+
+        // Agregar etiqueta y campo de texto al panel con restricciones
+        panelCreacionSeguro.add(label, gbc);
+        gbc.gridx++;
+        panelCreacionSeguro.add(textField, gbc);
+        gbc.gridx = 0; // Reiniciar la posición en X
+        gbc.gridy++;   // Moverse a la siguiente fila
         }
 
         // Configurar restricciones para los botones
@@ -102,13 +115,21 @@ public class CrearSeguro extends JFrame {
             // Puedes ajustar esta parte según los datos que desees guardar
             String tipoSeguro = "Tipo de Seguro: " + textFieldTipoSeguro.getText();
             String costoSeguro = "Costo del Seguro: " + textFieldCostoSeguro.getText();
-
+    
             // Escribir la información en el archivo
             writer.write(tipoSeguro + "\n");
             writer.write(costoSeguro + "\n");
             writer.write("----------------------------------------\n");  // Separador entre registros
+    
+            // Mostrar mensaje de confirmación
+            JOptionPane.showMessageDialog(this, "Información del seguro guardada correctamente.", "Confirmación",
+                    JOptionPane.INFORMATION_MESSAGE);
+    
         } catch (IOException ex) {
             ex.printStackTrace();
+            // Mostrar mensaje de error en caso de una excepción
+            JOptionPane.showMessageDialog(this, "Error al guardar la información del seguro.", "Error",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
     

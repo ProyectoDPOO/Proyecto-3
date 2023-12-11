@@ -27,18 +27,35 @@ public class GestionarSedes extends JFrame {
 
         // Agregar etiquetas y campos de texto
         String[] etiquetas = {
-                "Nombre de la Sede:",
-                "Ubicación:",
-                "Horario de Atención:",
-                "Nombre Administrador Local:"
-        };
+            "Nombre de la Sede:",
+            "Ubicación:",
+            "Horario de Atención:",
+            "Nombre Administrador Local:"
+    };
 
-        for (String etiqueta : etiquetas) {
-            JLabel label = new JLabel(etiqueta);
-            JTextField textField = new JTextField(20);
-            panelGestionSede.add(label);
-            panelGestionSede.add(textField);
+    // Inicializar los campos de texto y agregarlos al panel
+    for (int i = 0; i < etiquetas.length; i++) {
+        JLabel label = new JLabel(etiquetas[i]);
+        JTextField textField = new JTextField(20);
+        panelGestionSede.add(label);
+        panelGestionSede.add(textField);
+
+        // Asignar los campos de texto a las variables de instancia
+        switch (i) {
+            case 0:
+                textFieldNombreSede = textField;
+                break;
+            case 1:
+                textFieldUbicacion = textField;
+                break;
+            case 2:
+                textFieldHorarioAtencion = textField;
+                break;
+            case 3:
+                textFieldNombreAdminLocal = textField;
+                break;
         }
+    }
 
         // Agregar el botón "Buscar" que abre una nueva ventana
         JButton buscarButton = new JButton("Buscar");
@@ -109,7 +126,6 @@ public class GestionarSedes extends JFrame {
     }
     
     public static void main(String[] args) {
-        // Crear una instancia de la clase GestionarSedes al ejecutar el programa
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
