@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import Modelo.Facturar;
 public class GenerarFactura {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
@@ -42,9 +42,9 @@ public class GenerarFactura {
         generarFacturaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí iría la lógica para generar la factura
-                boolean facturaGeneradaExitosamente = true; // Cambia esto según la lógica de tu aplicación
+                //Facturar facturador = new Facturar("Andres Roberto", "11111111", "100000");
 
+                boolean facturaGeneradaExitosamente = true; 
                 if (facturaGeneradaExitosamente) {
                     // Mostrar mensaje de éxito
                     mensajeLabel.setText("Factura generada exitosamente");
