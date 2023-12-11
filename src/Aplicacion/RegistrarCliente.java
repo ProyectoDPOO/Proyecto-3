@@ -129,8 +129,8 @@ public class RegistrarCliente extends JFrame {
                 String tipoPago = tipoPagoTextField.getText();
                 String numeroMedioPago = numMedioPagoTextField.getText();
                 String fechaVencimientoPago = fechaVencimientoTextField.getText();
-                String imgDocidentidad = imgDocidentidadButton.getText();
-                String imgLicencia = imgLicenciaButton.getText();
+                String imgDocidentidad = imgDocidentidadTextField.getText();
+                String imgLicencia = imgLicenciaTextField.getText();
 
                 empresa.registrarCliente(nombre, nombreUsuario, contrasena, fechaNacimiento, telefono,
                         nacionalidad, imgDocidentidad, numIdentificacion, numLicencia,
@@ -181,33 +181,34 @@ public class RegistrarCliente extends JFrame {
         }
     }
     
-    private void guardarInformacionEnArchivo(String nombre, String nombreUsuario, String contrasena,
+        private void guardarInformacionEnArchivo(String nombre, String nombreUsuario, String contrasena,
             String fechaNacimiento, String telefono, String nacionalidad,
             String imgDocidentidad, String numIdentificacion, String numLicencia,
             String paisExpedicion, String fechaLicencia, String imgLicencia,
             String tipoPago, String numeroMedioPago, String fechaVencimientoPago) {
-	try (BufferedWriter writer = new BufferedWriter(new FileWriter("informacion_clientes.txt", true))) {
-			// Escribe la información del cliente en el archivo
-			writer.write("Nombre: " + nombre + "\n");
-			writer.write("Nombre de Usuario: " + nombreUsuario + "\n");
-			writer.write("Contraseña: " + contrasena + "\n");
-			writer.write("Fecha de Nacimiento: " + fechaNacimiento + "\n");
-			writer.write("Teléfono: " + telefono + "\n");
-			writer.write("Nacionalidad: " + nacionalidad + "\n");
-			writer.write("Número de Identificación: " + numIdentificacion + "\n");
-			writer.write("Número de Licencia: " + numLicencia + "\n");
-			writer.write("País de Expedición: " + paisExpedicion + "\n");
-			writer.write("Fecha de Licencia: " + fechaLicencia + "\n");
-			writer.write("Imagen Doc. Identidad: " + imgDocidentidad + "\n");
-			writer.write("Imagen Licencia: " + imgLicencia + "\n");
-			writer.write("Tipo de Pago: " + tipoPago + "\n");
-			writer.write("Número de Medio de Pago: " + numeroMedioPago + "\n");
-			writer.write("Fecha de Vencimiento de Medio de Pago: " + fechaVencimientoPago + "\n");
-			writer.write("----------------------------------------\n");  // Separador entre registros
-			} catch (IOException ex) {
-			ex.printStackTrace();
-			}
-		}
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("informacion_clientes.txt", true))) {
+            // Escribe la información del cliente en el archivo
+            writer.write("Nombre: " + nombre + "\n");
+            writer.write("Nombre de Usuario: " + nombreUsuario + "\n");
+            writer.write("Contraseña: " + contrasena + "\n");
+            writer.write("Fecha de Nacimiento: " + fechaNacimiento + "\n");
+            writer.write("Teléfono: " + telefono + "\n");
+            writer.write("Nacionalidad: " + nacionalidad + "\n");
+            writer.write("Número de Identificación: " + numIdentificacion + "\n");
+            writer.write("Número de Licencia: " + numLicencia + "\n");
+            writer.write("País de Expedición: " + paisExpedicion + "\n");
+            writer.write("Fecha de Licencia: " + fechaLicencia + "\n");
+            writer.write("Imagen Doc. Identidad: " + imgDocidentidad + "\n");
+            writer.write("Imagen Licencia: " + imgLicencia + "\n");
+            writer.write("Tipo de Pago: " + tipoPago + "\n");
+            writer.write("Número de Medio de Pago: " + numeroMedioPago + "\n");
+            writer.write("Fecha de Vencimiento de Medio de Pago: " + fechaVencimientoPago + "\n");
+            writer.write("----------------------------------------\n");  // Separador entre registros
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
         EmpresaAlquilerVehiculo empresa = new EmpresaAlquilerVehiculo();
