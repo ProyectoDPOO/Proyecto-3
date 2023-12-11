@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import interfaz.PagoProceso;
 
 public class alquiler extends JFrame {
     private JTextField[] txtCamposAlquiler;
@@ -54,10 +55,12 @@ public class alquiler extends JFrame {
 
         JButton crearAlquilerButton = new JButton("Crear Alquiler");
         JButton regresarButton = new JButton("Salir");
+        JButton facturarButton = new JButton("Realizar Pago");
 
         JPanel botonesPanel = new JPanel();
         botonesPanel.add(crearAlquilerButton);
         botonesPanel.add(regresarButton);
+        botonesPanel.add(facturarButton);
         panel.add(botonesPanel, BorderLayout.SOUTH);
 
 
@@ -88,7 +91,12 @@ public class alquiler extends JFrame {
                 dispose(); 
             }
         });
+        facturarButton.addActionListener(new ActionListener() {
 
+            public void actionPerformed(ActionEvent e) {
+                dispose(); 
+            }
+        });
         setVisible(true);
     }
     
@@ -132,10 +140,11 @@ public class alquiler extends JFrame {
 
         JButton crearAlquilerButton = new JButton("Crear Alquiler");
         JButton regresarButton = new JButton("Salir");
-
+        JButton facturarButton = new JButton("Realizar Pago");
         JPanel botonesPanel = new JPanel();
         botonesPanel.add(crearAlquilerButton);
         botonesPanel.add(regresarButton);
+        botonesPanel.add(facturarButton);
         panel.add(botonesPanel, BorderLayout.SOUTH);
 
 
@@ -167,6 +176,15 @@ public class alquiler extends JFrame {
                 dispose(); 
             }
         });
+        facturarButton.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                
+					PagoProceso ventana = new PagoProceso ();
+					dispose();
+				
+            }
+        });
 
         setVisible(true);
     }
@@ -177,7 +195,8 @@ public class alquiler extends JFrame {
     }
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        EmpresaAlquilerVehiculo empresa = new EmpresaAlquilerVehiculo();
+        //EmpresaAlquilerVehiculo empresa = new EmpresaAlquilerVehiculo();
+        EmpresaAlquilerVehiculo empresa = null;
         new alquiler(empresa);
     }
 }
