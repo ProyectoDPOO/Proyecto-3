@@ -37,3 +37,6 @@ Costo del Seguro: $1144556879
 Tipo de Seguro: Vehiculo
 Costo del Seguro: $897428233
 ----------------------------------------
+Tipo de Seguro: Vehiculo Ejemplo
+Costo del Seguro: $123456789
+----------------------------------------

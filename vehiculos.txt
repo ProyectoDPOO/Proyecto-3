@@ -22,3 +22,16 @@ null: 28/11/2023
 null: Automovil
 null: 0
 ----------------------------------------
+null: ABC123
+null: Audi
+null: 2003
+null: Gris
+null: Manual
+null: 5
+null: Camioneta
+null: Disponible
+null: Norte
+null: 11/12/2023
+null: Camioneta 4x4
+null: 10000
+----------------------------------------
