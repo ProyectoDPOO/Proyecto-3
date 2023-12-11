@@ -1,9 +1,9 @@
 package Modelo;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Image;
-import com.itextpdf.text.pdf.PdfWriter;
+
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.layout.Document;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -12,7 +12,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Facturar {
-    public void Facturar(String clientName, String idClient, String precioTotal) {
+    public Facturar(String clientName, String idClient, String precioTotal) {
+    	
+    	Factura factura = new Factura();
+    	factura.setItems(obtenerDetallesProductos()); // Implementa esta función según tus necesidades
+    	factura.setTotalAmount(paymentInfo.getMonto());
+
+    	// Llamada a la clase Facturar para generar el PDF
+    	Facturar facturador = new Facturar();
+    	facturador.Facturar(cardHolderName, cardNumber, Double.toString(paymentInfo.getMonto()));
         Document document = new Document();
 
         try {

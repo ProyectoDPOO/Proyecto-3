@@ -1,3 +1,0 @@
-SedeA,Dirección A,9-17,anderson.arevalo
-SedeB,Dirección B,10-18,juan.perez
-
